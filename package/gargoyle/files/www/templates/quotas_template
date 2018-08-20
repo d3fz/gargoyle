@@ -147,7 +147,7 @@
 			<option value="hours"><%~ TheseHours %></option>
 			<option value="days"><%~ TheseDays %></option>
 			<option value="days_and_hours"><%~ TheseDaysHours %></option>
-			<option value="weekly_range"><%~ TheseTimes %></options>
+			<option value="weekly_range"><%~ TheseTimes %></option>
 		</select>
 	</span>
 </div>
