@@ -54,7 +54,7 @@
 					<span class="col-xs-12">
 						<span id="add_exception_label" style="text-decoration:underline"><%~ NExcp %>:</span>
 						<%in templates/whitelist_template %>
-						<button id="add_restriction_button" class="btn btn-default btn-add" onclick="addNewRule('whitelist_rule', 'exception_')"><%~ ANRule %></button>
+						<button id="add_exception_button" class="btn btn-default btn-add" onclick="addNewRule('whitelist_rule', 'exception_')"><%~ ANRule %></button>
 					</span>
 				</div>
 
