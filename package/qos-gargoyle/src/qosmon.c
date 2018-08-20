@@ -666,7 +666,7 @@ void update_status( FILE* fd )
     fprintf(fd,"Link load: %d (kbps)\n",dbw/1000);
 
     if (pingon) {
-        if (nopingresponse) fprintf(fd,"Ping: Dropped, assume %d mS\n",rawfltime_max/1000);
+        if (nopingresponse) fprintf(fd,"Ping: Dropped, assume %d ms\n",rawfltime_max/1000);
         else fprintf(fd,"Ping: %d (ms)\n",rawfltime);
     }
     else
