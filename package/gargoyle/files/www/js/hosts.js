@@ -270,6 +270,7 @@ function parseWifi(arpHash, wirelessDriver, lines, apsta)
 		color = sig >= -80 && sig < -70 ? "#AA" + toHexTwo(170*((sig+80)/10.0)) + "00" : color;
 		color = sig >= -70 && sig < -60 ? "#" + toHexTwo(170-(170*(sig+70)/10.0)) + "AA00" : color;
 		color = sig >= -60 ? "#00AA00" : color;
+		color = sig >= -50 ? "#4286f4" : color;
 		var sigSpan = document.createElement("span");
 		sigSpan.appendChild(document.createTextNode(mbs[2] + " dBm"));
 		sigSpan.style.color = color;
