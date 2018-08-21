@@ -72,7 +72,7 @@
 <div class="col-lg-12">
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<h3 class="panel-title"><%~ BDst %>:</h3>
+			<h3 class="panel-title"><%~ BDst %></h3>
 		</div>
 		<div class="panel-body">
 			<span class="col-lg-8 col-xs-12"><embed id="pie_chart" src="multi_pie.svg"  type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/"></embed></span>
