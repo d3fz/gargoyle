@@ -315,6 +315,7 @@ function createTableFilter()
 			filterTxt.value = TFilter_Store[x];
 		}
 
+		filterTxt.className = "form-control";
 		filterTxt.onkeyup = function(){applyTableFilter(this.parentNode.parentNode.parentNode.parentNode.id);};
 
 		filterCol.appendChild(filterTxt);
