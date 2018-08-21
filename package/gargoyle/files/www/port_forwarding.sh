@@ -36,17 +36,23 @@
 			</div>
 
 			<div class="panel-body">
-				<div id="portf_add_heading_container" class="row form-group">
-					<label class="col-xs-12" id="portf_add_heading_label" style="text-decoration:underline"><%~ ForIPort %>:</label>
-				</div>
-
 				<div class="row form-group">
-					<div id="portf_add_container" class="col-xs-12 table-responsive">
-						<%in templates/single_forward_template %>
-					</div>
+					<span class="col-xs-12">
+						<div id="portf_add_heading_container">
+							<span id="portf_add_heading_label" style="text-decoration:underline"><%~ ForIPort %>:</span>
+						</div>
+						<div id="portf_add_container" class="table-responsive">
+							<%in templates/single_forward_template %>
+						</div>
+					</span>
 				</div>
-
-				<div id="portf_table_container" class="col-xs-12 table-responsive"></div>
+				<div class="internal_divider"></div>
+				<div class="row form-group">
+					<span class="col-xs-12">
+						<span style="text-decoration:underline"><%~ APFor %>:</span>
+						<div id="portf_table_container" class="table-responsive"></div>
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -58,17 +64,23 @@
 			</div>
 
 			<div class="panel-body">
-				<div id="portfrange_add_heading_container" class="row form-group">
-					<label class="col-xs-12" id="portf_add_heading_label" style="text-decoration:underline"><%~ ForRPort %>:</label>
-				</div>
-
 				<div class="row form-group">
-					<div id="portfrange_add_container" class="col-xs-12 table-responsive">
-						<%in templates/multi_forward_template %>
-					</div>
+					<span class="col-xs-12">
+						<div id="portfrange_add_heading_container">
+							<span id="portf_add_heading_label" style="text-decoration:underline"><%~ ForRPort %>:</span>
+						</div>
+						<div id="portfrange_add_container" class="table-responsive">
+							<%in templates/multi_forward_template %>
+						</div>
+					</span>
 				</div>
-
-				<div id="portfrange_table_container" class="col-xs-12 table-responsive"></div>
+				<div class="internal_divider"></div>
+				<div class="row form-group">
+					<span class="col-xs-12">
+						<span style="text-decoration:underline"><%~ APFor %>:</span>
+						<div id="portfrange_table_container" class="table-responsive"></div>
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -89,14 +101,13 @@
 					</span>
 				</div>
 
-				<div id="upnp_table_heading_container" class="row form-group">
-					<span class="col-xs-12" style="text-decoration:underline"><%~ APFor %>:</span>
-				</div>
-
-				<br/>
-
 				<div class="row form-group">
-					<div id="upnp_table_container" class="col-xs-12 bottom_gap table-responsive"></div>
+					<span class="col-xs-12">
+						<div id="upnp_table_heading_container">
+							<span style="text-decoration:underline"><%~ APFor %>:</span>
+						</div>
+						<div id="upnp_table_container" class="bottom_gap table-responsive"></div>
+					</span>
 				</div>
 
 				<div id="upnp_up_container" class="row form-group">
@@ -116,8 +127,12 @@
 				</div>
 
 				<div id="upnp_help" class="row form-group">
-					<span class="col-xs-12"><a id="upnp_help_ref" onclick="setDescriptionVisibility('upnp_help')" href="#upnp_help"><%~ Hide %></a></span>
-					<span class="col-xs-12" id="upnp_help_txt"><%~ UPHelp %></span>
+					<span class="col-xs-12" id="upnp_help_txt">
+						<div class="alert alert-info"><%~ UPHelp %></div>
+					</span>
+					<span class="col-xs-12">
+						<a id="upnp_help_ref" onclick="setDescriptionVisibility('upnp_help')" href="#upnp_help"><%~ Hide %></a>
+					</span>
 				</div>
 			</div>
 		</div>

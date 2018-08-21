@@ -39,45 +39,51 @@
 					</span>
 				</div>
 
-				<div>
-					<div class="row form-group">
-						<label class="col-xs-5" for="num_domains" id="num_domains_label"><%~ NumSt %>:</label>
-						<span class="col-xs-7"><input type="text" class="form-control" id="num_domains" onkeyup="proofreadNumericRange(this,1,9999)" size="6" maxlength="4" /></span>
-					</div>
+				<div class="row form-group">
+					<label class="col-xs-5" for="num_domains" id="num_domains_label"><%~ NumSt %>:</label>
+					<span class="col-xs-7"><input type="text" class="form-control" id="num_domains" onkeyup="proofreadNumericRange(this,1,9999)" size="6" maxlength="4" /></span>
+				</div>
 
-					<div class="row form-group">
-						<label class="col-xs-5" for="num_searches" id="num_searches_label"><%~ NumSr %>:</label>
-						<span class="col-xs-7"><input type="text" class="form-control" id="num_searches" onkeyup="proofreadNumericRange(this,1,9999)" size="6" maxlength="4" /></span>
-					</div>
+				<div class="row form-group">
+					<label class="col-xs-5" for="num_searches" id="num_searches_label"><%~ NumSr %>:</label>
+					<span class="col-xs-7"><input type="text" class="form-control" id="num_searches" onkeyup="proofreadNumericRange(this,1,9999)" size="6" maxlength="4" /></span>
+				</div>
 
+				<div class="row form-group">
+					<span class="col-xs-12">
+						<select id="include_exclude" class="form-control" onchange="setIncludeExclude()">
+							<option value="all"><%~ MnAH %></option>
+							<option value="include"><%~ MnOnly %></option>
+							<option value="exclude"><%~ MnExcl %></option>
+						</select>
+					</span>
+				</div>
+
+				<div id="add_ip_container">
 					<div class="row form-group">
 						<span class="col-xs-12">
-							<select id="include_exclude" class="form-control" onchange="setIncludeExclude()">
-								<option value="all"><%~ MnAH %></option>
-								<option value="include"><%~ MnOnly %></option>
-								<option value="exclude"><%~ MnExcl %></option>
-							</select>
+							<input type="text" id="add_ip" class="form-control" onkeyup="proofreadMultipleIps(this)" size="30" />
+							<button class="btn btn-default btn-add" id="add_ip_button" onclick="addAddressesToTable(document, 'add_ip', 'ip_table_container', 'ip_table', false, 3, 1, 250)" /><%~ Add %></button>
+						</span>
+						<span class="col-xs-12">
+							<em><%~ SpcIP %></em>
 						</span>
 					</div>
-
-					<div id="add_ip_container">
-						<div class="row form-group">
-							<span class="col-xs-12">
-								<input type="text" id="add_ip" onkeyup="proofreadMultipleIps(this)" size="30" />
-								<button class="btn btn-default btn-add" id="add_ip_button" onclick="addAddressesToTable(document, 'add_ip', 'ip_table_container', 'ip_table', false, 3, 1, 250)"><%~ Add %></button>
-							</span>
-							<em class="col-xs-12"><%~ SpcIP %></em>
-						</div>
-						<div id="ip_table_container" class="table-responsive"></div>
+					<div class="row form-group">
+						<span class="col-xs-12">
+							<div id="ip_table_container" class="table-responsive"></div>
+						</span>
 					</div>
 				</div>
 
 				<div class="internal_divider"></div>
 
-				<div id="bottom_button_container">
-					<button id="save_button" class="btn btn-primary btn-lg" onclick="saveChanges()"><%~ SaveChanges %></button>
-					<button id="reset_button" class="btn btn-warning btn-lg" onclick="resetData()"><%~ Reset %></button>
-					<button id="clear_history" class="btn btn-danger btn-lg" onclick="clearHistory()"><%~ Clear %></button>
+				<div id="bottom_button_container" class="row form-group">
+					<span class="col-xs-12">
+						<button id="save_button" class="btn btn-primary btn-lg" onclick="saveChanges()"><%~ SaveChanges %></button>
+						<button id="reset_button" class="btn btn-warning btn-lg" onclick="resetData()"><%~ Reset %></button>
+						<button id="clear_history" class="btn btn-danger btn-lg" onclick="clearHistory()"><%~ Clear %></button>
+					</span>
 				</div>
 			</div>
 		</div>
@@ -93,15 +99,19 @@
 
 			<div class="panel-body">
 				<div class="row form-group">
-					<span class="col-xs-12">
-						<select id="domain_host_display" class="row form-group" onchange="updateMonitorTable()">
+					<label class="col-xs-5" for="domain_host_display"><%~ HDsp %>:</label>
+					<span class="col-xs-7">
+						<select id="domain_host_display" class="form-control" onchange="updateMonitorTable()">
 							<option value="hostname"><%~ DspHn %></option>
 							<option value="ip"><%~ DspHIP %></option>
 						</select>
 					</span>
 				</div>
-
-				<div id="webmon_domain_table_container" class="table-responsive"></div>
+				<div class="row form-group">
+					<span class="col-xs-12">
+						<div id="webmon_domain_table_container" class="table-responsive"></div>
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -114,15 +124,19 @@
 
 			<div class="panel-body">
 				<div class="row form-group">
-					<span class="col-xs-12">
+					<label class="col-xs-5" for="search_host_display"><%~ HDsp %>:</label>
+					<span class="col-xs-7">
 						<select id="search_host_display" class="form-control" onchange="updateMonitorTable()">
 							<option value="hostname"><%~ DspHn %></option>
 							<option value="ip"><%~ DspHIP %></option>
 						</select>
 					</span>
 				</div>
-
-				<div id="webmon_search_table_container" class="table-responsive"></div>
+				<div class="row form-group">
+					<span class="col-xs-12">
+						<div id="webmon_search_table_container" class="table-responsive"></div>
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -137,13 +151,19 @@
 
 			<div class="panel-body">
 				<div class="row form-group">
-					<span class="col-xs-12" style="text-decoration:underline"><%~ cmsep %>:</span>
-					<code class="col-xs-12"><%~ dForm %></code>
+					<span class="col-xs-12">
+						<span style="text-decoration:underline"><%~ cmsep %>:</span>
+					</span>
+					<span class="col-xs-12">
+						<code><%~ dForm %></code>
+					</span>
 				</div>
 
-				<div>
-					<button id="download_domain_button" class="btn btn-info btn-lg" onclick="window.location='webmon_domains.csv';"><%~ VSit %></button>
-					<button id="download_search_button" class="btn btn-info btn-lg" onclick="window.location='webmon_searches.csv';"><%~ SRqst %></button>
+				<div class="row form-group">
+					<span class="col-xs-12">
+						<button id="download_domain_button" class="btn btn-info btn-lg" onclick="window.location='webmon_domains.csv';"><%~ VSit %></button>
+						<button id="download_search_button" class="btn btn-info btn-lg" onclick="window.location='webmon_searches.csv';"><%~ SRqst %></button>
+					</span>
 				</div>
 			</div>
 		</div>

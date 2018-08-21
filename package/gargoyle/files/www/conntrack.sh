@@ -67,8 +67,10 @@
 					</span>
 				</div>
 				<div class="row form-group">
-					<div class="alert alert-warning" role="alert"><%~ CnWarn %></div>
-					<div id="connection_table_container" class="table-responsive col-xs-12"></div>
+					<span class="col-xs-12">
+						<div class="alert alert-info" role="alert"><%~ CnWarn %></div>
+						<div id="connection_table_container" class="table-responsive"></div>
+					</span>
 				</div>
 			</div>
 
