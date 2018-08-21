@@ -22,6 +22,9 @@
 <div class="row">
 	<div class="col-lg-12">
 		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title"><%~ quotas.USect %></h3>
+			</div>
 			<div class="panel-body">
 				<div class="row form-group">
 					<label class="col-xs-5 col-sm-3" for="host_display"><%~ HDsp %>:</label>
