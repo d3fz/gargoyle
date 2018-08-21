@@ -268,7 +268,7 @@ var isb43 = wirelessDriver == "mac80211" && (!GwifiN) ? true : false ;
 							<option value="custom"><%~ Cstm %></option>
 						</select>
 						&nbsp;
-						<input type="text" id="bridge_txpower_5ghz" onkeyup="proofreadNumericRange(this,0,getMaxTxPower('A'));" size="10" />
+						<input type="text" class="form-control" id="bridge_txpower_5ghz" onkeyup="proofreadNumericRange(this,0,getMaxTxPower('A'));" size="10" />
 						<em><span id="bridge_dbm_5ghz">dBm</span></em>
 					</span>
 				</div>
@@ -276,7 +276,7 @@ var isb43 = wirelessDriver == "mac80211" && (!GwifiN) ? true : false ;
 				<div id="bridge_list_ssid_container" class="row form-group">
 					<label class="col-xs-5" for="bridge_list_ssid" id="bridge_list_ssid_label"><%~ Join %>:</label>
 					<span class="col-xs-7">
-						<select id="bridge_list_ssid" style="width:180px;max-width:180px" onchange="setSsidVisibility(this.id)" >
+						<select id="bridge_list_ssid" class="form-control" style="width:180px;max-width:180px" onchange="setSsidVisibility(this.id)">
 							<option value="custom"><%~ Other %></option>
 						</select>
 						<button class="btn btn-default" id="bridge_rescan_button" onclick="scanWifi('bridge_custom_ssid')"><%~ RScn %></button>
@@ -518,7 +518,7 @@ var isb43 = wirelessDriver == "mac80211" && (!GwifiN) ? true : false ;
 				<div id="wan_3g_device_container" class="row form-group">
 					<label class="col-xs-5" for="wan_3g_device" id="wan_3g_device_label"><%~ Dvic %>:</label>
 					<span class="col-xs-7">
-						<select style="display:none;float:left;max-width:180px" id="wan_3g_list_device" onchange="set3GDevice(this.value)"></select>
+						<select style="display:none;float:left;max-width:180px" class="form-control" id="wan_3g_list_device" onchange="set3GDevice(this.value)"></select>
 						<input style="float:left;" type="text" class="form-control" id="wan_3g_device" size="20" onkeyup="proofreadLengthRange(this,1,999)"/>
 						<button style="float:left;" class="btn btn-default" id="wan_3g_scan_button" onclick="scan3GDevice('wan_3g_list_device')"><%~ Scan %></button>
 					</span>
