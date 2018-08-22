@@ -36,27 +36,23 @@
 </script>
 <h1 class="page-header"><%~ access.mAccess %></h1>
 <div class="row">
-	<div class="col-lg-12">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title"><%~ ChangePass %></h3>
-				</div>
+	<div class="col-lg-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title"><%~ ChangePass %></h3>
+			</div>
 			<div class="panel-body">
-			<div class="row form-group">
-				<label class="col-xs-5" for="password1" id="password1_label"><%~ NewPass %>:</label>
-				<span class="col-xs-7"><input type="password" class="form-control" id="password1" size="25"/></span>
-			</div>
+				<div class="row form-group">
+					<label class="col-xs-5" for="password1" id="password1_label"><%~ NewPass %>:</label>
+					<span class="col-xs-7"><input type="password" class="form-control" id="password1" size="25"/></span>
+				</div>
 
-			<div class="row form-group">
-				<label class="col-xs-5" for="password2" id="password2_label"><%~ ConfirmPass %>:</label>
-				<span class="col-xs-7"><input type="password" class="form-control" id="password2" size="25"/></span>
-			</div>
+				<div class="row form-group">
+					<label class="col-xs-5" for="password2" id="password2_label"><%~ ConfirmPass %>:</label>
+					<span class="col-xs-7"><input type="password" class="form-control" id="password2" size="25"/></span>
+				</div>
 			</div>
 		</div>
-	</div>
-</div>
-<div class="row">
-	<div class="col-lg-6">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title"><%~ access.Section %></h3>
@@ -72,16 +68,14 @@
 						</select>
 					</span>
 				</div>
-				<div>
-					<div id="local_http_port_container" class="row form-group">
-						<label class="col-xs-5" for="local_http_port" id="local_http_port_label"><%~ LocalPort %>:</label>
-						<span class="col-xs-7"><input type="text" class="form-control" id="local_http_port" size="7" maxlength="5" onkeyup="proofreadNumericRange(this,1,65535)"/></span>
-					</div>
+				<div id="local_http_port_container" class="row form-group">
+					<label class="col-xs-5" for="local_http_port" id="local_http_port_label"><%~ LocalPort %>:</label>
+					<span class="col-xs-7"><input type="text" class="form-control" id="local_http_port" size="7" maxlength="5" onkeyup="proofreadNumericRange(this,1,65535)"/></span>
+				</div>
 
-					<div id="local_https_port_container" class="row form-group">
-						<label class="col-xs-5" for="local_https_port" id="local_https_port_label"><%~ Local_S_Port %>:</label>
-						<span class="col-xs-7"><input type="text" class="form-control" id="local_https_port" size="7" maxlength="5" onkeyup="proofreadNumericRange(this,1,65535)"/></span>
-					</div>
+				<div id="local_https_port_container" class="row form-group">
+					<label class="col-xs-5" for="local_https_port" id="local_https_port_label"><%~ Local_S_Port %>:</label>
+					<span class="col-xs-7"><input type="text" class="form-control" id="local_https_port" size="7" maxlength="5" onkeyup="proofreadNumericRange(this,1,65535)"/></span>
 				</div>
 
 				<div id="remote_web_protocol_container" class="row form-group">
@@ -200,14 +194,16 @@
 					<div id="authorized_keys_table_container" class="col-xs-7 table-responsive"></div>
 					<div id="ssh_help">
 						<span class="col-xs-12" id="ssh_help_txt" style="display:none">
-							<p><%~ SSHHelp1 %></p>
-							<p><%~ SSHHelp2 %></p>
-							<p><%~ SSHHelp3 %></p>
-							<ul>
-								<li><%~ SSHHelp3a %></li>
-								<li><%~ SSHHelp3b %></li>
-							</ul>
-							<p><%~ SSHHelp4 %></p>
+							<div class="alert alert-info">
+								<p><%~ SSHHelp1 %></p>
+								<p><%~ SSHHelp2 %></p>
+								<p><%~ SSHHelp3 %></p>
+								<ul>
+									<li><%~ SSHHelp3a %></li>
+									<li><%~ SSHHelp3b %></li>
+								</ul>
+								<p><%~ SSHHelp4 %></p>
+							</div>
 						</span>
 						<span class="col-xs-12"><a onclick="setDescriptionVisibility('ssh_help')"  id="ssh_help_ref" href="#ssh_help"><%~ MoreInfo %></a></span>
 					</div>
