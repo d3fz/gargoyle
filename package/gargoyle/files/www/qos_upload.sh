@@ -64,8 +64,8 @@
 
 				<div class="internal_divider"></div>
 
-				<div id="add_rule_container">
-					<span style="text-decoration: underline"><%~ AddNewClassRule %>:</span>
+				<div><strong><%~ AddNewClassRule %>:</strong></div>
+				<div>
 					<div class="row form-group">
 						<span class="col-xs-5">
 							<input type="checkbox" id="use_source_ip" onclick="enableAssociatedField(this,'source_ip', '')" />
@@ -171,7 +171,7 @@
 						<span class="col-xs-7"><select class="rightcolumn" id="classification"></select></span>
 					</div>
 
-					<div class="row form-group">
+					<div id="add_rule_container" class="row form-group">
 						<span class="col-xs-12"><button id="add_rule_button" class="btn btn-default btn-add" onclick="addClassificationRule()" ><%~ AddRule %></button></span>
 					</div>
 				</div>
@@ -214,8 +214,8 @@
 
 				<div class="internal_divider"></div>
 
-				<div id="add_class_container">
-					<span style="text-decoration: underline"><%~ AddNewServiceRule %>:</span>
+				<div><strong><%~ AddNewServiceRule %>:</strong></div>
+				<div>
 					<div class="row form-group">
 						<label class="col-xs-5" id="class_name_label" for="class_name"><%~ SrvClassName %>:</label>
 						<span class="col-xs-7"><input type="text" id="class_name" onkeyup="proofreadLengthRange(this,1,10)" size="12" maxlength="10" /></span>
@@ -268,7 +268,7 @@
 						</div>
 					</div>
 
-					<div class="row form-group">
+					<div class="row form-group" id="add_class_container">
 						<span class="col-xs-12"><button id="add_class_button" class="btn btn-default btn-add" onclick="addServiceClass()"><%~ AddSvcCls %></button></span>
 					</div>
 				</div>
